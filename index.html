@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="Fr-fr">
+<head>
+	<meta charset="utf-8" />
+	<title>Epika</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<link rel="stylesheet" type="text/css" href="prototype1.css" />
+	<link rel="icon" href="img/icon-vaporwave-website.png" />
+</head>
+
+<body>
+	<div id="page-container">
+		<header>
+			<h1 id="titre">EPIKA</h1>
+		</header>
+
+		<main>
+			<div id="mini-jeux">
+				<div id="mini-jeux__icones">
+					<div id="shifumi-icone" class="icone"><img src="img/pierre.png" alt="shifumi" width="70px" height="70px"></div>
+					<div id="infinite-sword-icone" class="icone">épée</div>
+					<div id="useless-button-icone" class="icone">bouton</div>
+					<div id="color-editor-icone" class="icone">color editor</div>
+				</div>
+
+				<div id="mini-jeux__jeux">
+
+					<div id="shifumi" class="mini-jeu mini-jeux-hide">
+						<form id="shifumi-box" action="" method="get">
+							<h3 id="shifumi-title">Shifumi</h3>
+
+							<div id="shifumi-fight">
+								<div class="score-indication-box"><span id="user-choice"></span><span class="score-indication">TOI</span></div>
+
+								<div id="shifumi-results"><span id="shifumi-results-display"></span></div>
+
+								<div class="score-indication-box"><span id="my-choice"></span><span class="score-indication">BOT</span></div>
+							</div>
+
+							<div id="shifumi-choice">
+								<label id="pierre">
+									<input type="radio" id="pierre__input" name="shifumi-value" value="pierre" />
+									<span id="shifumi-pierre-display"></span>
+								</label>
+
+								<label id="feuille">
+									<input type="radio" id="feuille__input" name="shifumi-value" value="feuille" />
+									<span id="shifumi-feuille-display"></span>
+								</label>
+
+								<label id="ciseaux">
+									<input type="radio" id="ciseaux__input" name="shifumi-value" value="ciseaux" />
+									<span id="shifumi-ciseaux-display"></span>
+								</label>
+							</div>
+
+							<button id="shifumi-submit">Confirmer</button>
+
+						</form>
+					</div>
+					<div id="shifumi-score" class="hide-bloc mini-jeu-score">
+						<div id="user-score"><span class="score-indication">Toi</span><span id="display-user-score"></span></div>
+						<span>SCORES SHIFUMI</span>
+						<div id="my-score"><span class="score-indication">Moi</span><span id="display-my-score"></span></div>
+					</div>
+
+
+					<!-- INFINITE(?) SWORD -->
+
+					<div id="sword-container" class="mini-jeu mini-jeux-hide">
+						<div id="fourreau" class="hide">
+							<div id="sword">
+								<pre id="sword__handle">
+               _
+             _/-\_
+Scroll !    ( |=| )
+           (  |=|  )
+            ||___||
+ Peut être   |   |
+que tu       |===|
+  trouvera   |   |
+ la pointe ? |   |
+             |===|
+             |   |
+     /|______|___|______|\
+    _|       (|-|)       |_
+  _/    o    (|-|)   o     \_
+ /     _O    (|-|)   O_      \
+(            (/-\)            )
+ \|\/\/__\/\/\"""/\/\/__\/\/|/
+       |  |  Y   Y  |  |
+       |  |  | Y |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |</pre>
+
+		<pre id="sword__blade">
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |</pre>
+<pre id="sword__tip" class="hide-sword">
+|  |  | | |  |  |
+\  |  | | |  |  /
+ \ |  | | |  | /
+  \|  | | |  |/
+   \  | | |  /
+    \ | | | /
+     \| | |/
+Bravo \ | /
+ C'est \|/
+  bien la pointe
+
+</pre>
+							</div>
+						</div>
+					</div>
+
+					<div id="infinite-sword-count" class="hide-bloc mini-jeu-score">
+						<p><span id="infinite-sword-count__nb"></span> Morceaux de lame ajouté.</p>
+					</div>
+
+
+					<!-- USELESS BUTTON -->
+
+					<div id="useless-button" class="mini-jeu mini-jeux-hide">
+						<button id="useless-button__btn">Salut toi</button>
+					</div>
+
+					<div id="useless-clics" class="hide-bloc mini-jeu-score">
+						<p>ça nous fait <span id="useless-clics__nb"></span> clics !</p>
+					</div>
+
+
+					<!-- RGB / HSL EDITOR -->
+
+					<div id="color-editor" class="mini-jeu mini-jeux-hide">
+						<div id="color-container">
+
+							<!-- RGB -->
+							<div id="rgb-canvas" class="color-canvas show-canvas">
+								<span class="color-input">
+									<input type="range" id="r-slider" name="r-slider" min="0" max="255" value="255" onChange="changeR(this.value)" onInput="changeR(this.value)" />
+								</span>
+								<span class="color-input">
+									<input type="range" id="g-slider" name="g-slider" min="0" max="255" value="255" onChange="changeG(this.value)" onInput="changeG(this.value)" />
+								</span>
+								<span class="color-input">
+									<input type="range" id="b-slider" name="b-slider" min="0" max="255" value="255" onChange="changeB(this.value)" onInput="changeB(this.value)" />
+								</span>
+								<span id="rgb-value"></span>
+
+							</div>
+
+							<!-- HSL -->
+<!--							<div id="hsl-canvas" class="color-canvas hide-canvas">
+								<span>
+									<input type="range" id="h-slider" name="r-slider" min="0" max="359" value="0" onChange="changeH(this.value)" onInput="changeH(this.value)" />
+								</span>
+								<span>
+									<input type="range" id="s-slider" name="g-slider" min="0" max="100" value="100" onChange="changeS(this.value)" onInput="changeS(this.value)" />
+								</span>
+								<span>
+									<input type="range" id="l-slider" name="b-slider" min="0" max="100" value="50" onChange="changeL(this.value)" onInput="changeL(this.value)" />
+								</span>
+							</div>
+				-->
+						</div>
+<!--						<div id="color-selector-container">
+							<div id="rgb-button">RGB</div>
+							<div id="hsl-button">HSL</div>
+						</div>
+					-->
+					</div>
+
+					<div class="hide-bloc mini-jeu-score"></div>
+
+					<div id="caDitQuoi"><p>Ça raconte quoi ici ?</p></div>
+				</div>
+
+			</div>
+
+			<div id="carte-a-propos">
+				<div id="card-inner">
+					<div id="verso">
+						<h3>A propos de moi</h3>
+					</div>
+					<div id="recto">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed blandit erat. Etiam suscipit fermentum lectus, at viverra tellus facilisis ac. Integer vitae pulvinar est. Nullam tincidunt arcu at dignissim sodales. Praesent pretium tellus quis mi tincidunt, sit amet dictum</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="skills">
+				<label id="skills-label" class="skills-title-hide">
+					<input id="skills__toggle" type="checkbox" />
+					<span id="skills__toggle__button"><span>Compétences</span></span>
+				</label>
+
+				<ul id="skills-list" class="skills-hide">
+					<li>HTML</li>
+					<li>CSS/Sass</li>
+					<li>JavaScript</li>
+					<li>GitHub</li>
+					<li>C</li>
+					<li>Unix Shell</li>
+				</ul>
+			</div>
+		</main>
+
+		<footer>
+		</footer>
+	</div>
+
+	<script src="prototype1.js"></script>
+</body>
+</html>
