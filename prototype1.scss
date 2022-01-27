@@ -120,6 +120,10 @@ main {
 	height: 100%;
 	width: 100%;
 
+	display: flex;
+	flex-direction: column; justify-content: space-around;
+
+	overflow: hidden;
 	margin-left: 40px;
 
 	background-color: #33535a82;
@@ -132,6 +136,7 @@ main {
 	z-index: 2;
 
 	position: absolute;
+	top: 0; left: 0;
 	transform-origin: left;
 
 	width: 90%;
@@ -139,8 +144,11 @@ main {
 }
 
 .mini-jeu-score {
-	padding: 0 10px;
-	border-radius: 10px;
+	height: 70px; width: 70%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	margin-left: 45%;
 	transform: translateX(-50%);
@@ -226,7 +234,7 @@ main {
 	background-position: center;
 	background-size: cover;
 
-	box-shadow: none;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, .8);
 	transition: .1s;
 }
 
@@ -238,7 +246,8 @@ main {
 #ciseaux__input:checked + #shifumi-ciseaux-display,
 #feuille__input:checked + #shifumi-feuille-display,
 #pierre__input:checked + #shifumi-pierre-display {
-	box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .8);
+	box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .8);
+	background-color: #6b92aa8a;
 	transition: .1s;
 }
 
@@ -255,6 +264,8 @@ main {
 
 #shifumi-feuille-display {
 	background-image: url(img/feuille.png);
+	background-size: 60px;
+	background-repeat: no-repeat;
 }
 
 
@@ -288,7 +299,6 @@ main {
 
 #shifumi-fight {
 	width: 70%; height: 100px;
-	position: absolute;
 
 	display: flex;
 	flex-direction: row;
@@ -319,7 +329,7 @@ main {
 	border-radius: 10px;
 
 	position: absolute;
-	top: 230%; left: 50%;
+	top: 60%; left: 50%;
 	transform: translateX(-50%);
 }
 
@@ -344,16 +354,11 @@ main {
 #shifumi-score {
 	width: 75%; height: 70px;
 
-	position: absolute;
-	top: 14px; left: 20px;
-
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around; align-items: center;
+	justify-content: space-around;
 }
 
 #shifumi-score #user-score, #shifumi-score #my-score {
-	width: 70px; height: 70px;
+	width: 70px;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
 	border-radius: 10px;
 
@@ -400,16 +405,8 @@ main {
 
 /* Affichage du nombre de scrolls sur Infinite Sword */
 
-#infinite-sword-count {
-	height: 70px;
-
-	position: absolute;
-	top: 116px; left: 20px;
-}
-
 #infinite-sword-count p {
 	font-size: 1.25rem;
-	margin-top: 21px;
 }
 
 
@@ -459,15 +456,6 @@ main {
 
 /* Affichage du nombre de clics */
 
-#useless-clics {
-	height: 70px;
-
-	position: absolute;
-	top: 218px; left: 20px;
-	display: flex;
-	align-items: center; justify-content: center;
-}
-
 #useless-clics p {
 	font-size: 1.25rem;
 }
@@ -481,7 +469,6 @@ main {
 
 	display: flex;
 	flex-direction: column;
-	position: relative;
 
 	#color-container {
 		width: 100%;
@@ -601,6 +588,10 @@ main {
 	}
 }
 */
+
+/* Section "Score" de RGB */
+
+
 
   /**************************/
  /* "Ça raconte quoi ici?" */

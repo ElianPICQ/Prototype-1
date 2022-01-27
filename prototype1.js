@@ -23,9 +23,16 @@ const colorEditor = document.getElementById('color-editor');
 const displayInfiniteSwordCount = document.getElementById('infinite-sword-count');
 const displayNbClics = document.getElementById('useless-clics');
 const displayShifumiScore = document.getElementById('shifumi-score');
+const displayRgbScore = document.getElementById("rgb-score");
 
 //Boite ciblée des scores à incrémenter
 const InfiniteSwordCount = document.getElementById('infinite-sword-count__nb');
+
+//Boite de la valeur RGB dans la balise de score
+
+const rgbScoreValue = document.getElementById("rgb-score-value");
+
+var showRGB = false;
 
 function  hide_mini_jeux() {
   Array.prototype.forEach.call(miniJeux, function(item) {
@@ -46,6 +53,8 @@ Array.prototype.forEach.call(miniJeuxIcones, function(icone) {
       displayShifumiScore.classList.replace("hide-bloc", "show-bloc");
     if (displayInfiniteSwordCount.classList.contains("hide-bloc") && bladeCount > 0)
       displayInfiniteSwordCount.classList.replace("hide-bloc", "show-bloc");
+    if (displayRgbScore.classList.contains("hide-bloc") && showRGB == true)
+      displayRgbScore.classList.replace("hide-bloc", "show-bloc");
 
 
     //On ouvre ou ferme les mini-jeux
@@ -79,7 +88,7 @@ Array.prototype.forEach.call(miniJeuxIcones, function(icone) {
         }
         break;
 
-        case 'color-editor-icone':
+      case 'color-editor-icone':
         if (colorEditor.classList.contains("mini-jeux-show"))
           colorEditor.classList.replace("mini-jeux-show", "mini-jeux-hide");
         else if (colorEditor.classList.contains("mini-jeux-hide")) {
@@ -291,6 +300,7 @@ const colors = ["red", "green", "blue"];
 const colors2 = ["hue", "sat", "light"];
 
 function  changeR(value) {
+  showRGB = true;
   let rgb = window.getComputedStyle(rgbCanvas).backgroundColor;
 
   let colorArr = rgb.slice(
@@ -309,9 +319,13 @@ function  changeR(value) {
         "rgb(" + value + ',' + obj.green + ',' + obj.blue + ")";
 
   rgbDisplayValue.innerHTML = rgbCanvas.style.backgroundColor;
+
+  displayRgbScore.style.backgroundColor = rgbCanvas.style.backgroundColor;
+  rgbScoreValue.innerHTML = rgbCanvas.style.backgroundColor;
 }
 
 function  changeG(value) {
+  showRGB = true;
   let rgb = window.getComputedStyle(rgbCanvas).backgroundColor;
 
   let colorArr = rgb.slice(
@@ -330,9 +344,13 @@ function  changeG(value) {
         "rgb(" + obj.red + ',' + value + ',' + obj.blue + ")";
 
   rgbDisplayValue.innerHTML = rgbCanvas.style.backgroundColor;
+
+  displayRgbScore.style.backgroundColor = rgbCanvas.style.backgroundColor;
+  rgbScoreValue.innerHTML = rgbCanvas.style.backgroundColor;
 }
 
 function  changeB(value) {
+  showRGB = true;
   let rgb = window.getComputedStyle(rgbCanvas).backgroundColor;
 
   let colorArr = rgb.slice(
@@ -351,6 +369,9 @@ function  changeB(value) {
         "rgb(" + obj.red + ',' + obj.green + ',' + value + ")";
 
   rgbDisplayValue.innerHTML = rgbCanvas.style.backgroundColor;
+
+  displayRgbScore.style.backgroundColor = rgbCanvas.style.backgroundColor;
+  rgbScoreValue.innerHTML = rgbCanvas.style.backgroundColor;
 }
 
 /*
