@@ -720,6 +720,15 @@ main {
 }
 
 /* Pour les compétences (<li>) */
+#skills-list {
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.skills-show {
+  background-color: #00000078;
+  transition: background-color 1.5s linear;
+}
 .skills-show li {
   animation: showSkills 1.2s ease-in-out 0.8s;
   animation-fill-mode: both;
@@ -752,6 +761,10 @@ main {
     transform: translateX(35px);
     opacity: 1;
   }
+}
+.skills-hide {
+  background-color: transparent;
+  transition: background-color 1.5s linear;
 }
 .skills-hide li {
   animation: hideSkills 1s ease-in-out both;

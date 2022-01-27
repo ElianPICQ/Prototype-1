@@ -228,7 +228,6 @@ function  addBlade(entry) {
     // On observe le dernier bout de lame (càd la lame clonée)
     observer.observe(clonedBlade);
 
-    console.log(toTheTip);
   } else {
     let clonedTip = tip.cloneNode(true);
     sword.appendChild(clonedTip);
@@ -390,12 +389,11 @@ const skills = document.getElementById("skills-list");
 
 skills_button.addEventListener('click', function() {
   if (skills_button.checked) {
-    console.log("checked !");
     skillsLabel.classList.replace("skills-title-hide", "skills-title-show");
     skills.classList.replace("skills-hide", "skills-show");
+
   }
   else if (skills_button.checked == false) {
-    console.log("unchecked...");
     skillsLabel.classList.replace("skills-title-show", "skills-title-hide");
     skills.classList.replace("skills-show", "skills-hide");
   }
